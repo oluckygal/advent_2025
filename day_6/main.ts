@@ -36,12 +36,12 @@ class MathProblem {
     }
 }
 
-function loadFileAsCharacterArrayLines(path: string): string[][] {
+function loadFileAsLines(path: string): string[] {
     const lines = readFileSync(path, { encoding: "utf8" }).split("\n")
-    return lines.map((line) => line.split(''));
+    return lines
 }
 
-function generateCephalopodNumber(charGrid: string[][], columnAddr: number): number | undefined{
+function generateCephalopodNumber(charGrid: string[], columnAddr: number): number | undefined{
     let numberCollector = "";
     for (let j = 0; j < charGrid.length - 1; j++){
         const digit = charGrid[j][columnAddr];
@@ -55,7 +55,7 @@ function generateCephalopodNumber(charGrid: string[][], columnAddr: number): num
     return parseInt(numberCollector, 10);
 }
 
-const rawMathProblems : string[][] = loadFileAsCharacterArrayLines("./input.txt");
+const rawMathProblems : string[] = loadFileAsLines("./input.txt");
 let sumOfAnswers = 0
 let mathProblem: MathProblem | undefined;
 for (let i = 0; i < rawMathProblems[0].length; i++){
