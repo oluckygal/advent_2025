@@ -102,6 +102,34 @@
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Day 8",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "localRoot": "${workspaceFolder}\\day_8",
+            "program": "${workspaceFolder}\\day_8\\main.ts",
+            "preLaunchTask": "tsc: build - day_8/tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Day 9",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "localRoot": "${workspaceFolder}\\day_9",
+            "program": "${workspaceFolder}\\day_9\\main.ts",
+            "preLaunchTask": "tsc: build - day_9/tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
         }
     ]
 }
