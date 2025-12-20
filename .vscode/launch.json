@@ -158,6 +158,20 @@
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Day 12",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "localRoot": "${workspaceFolder}\\day_12",
+            "program": "${workspaceFolder}\\day_12\\main.ts",
+            "preLaunchTask": "tsc: build - day_12/tsconfig.json",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
         }
     ]
 }
