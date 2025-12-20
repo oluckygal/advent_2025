@@ -45,7 +45,7 @@ function countPaths(stateTransitionMap: StateTransitionMap, start: State, end: S
         }
         const nextState: State | undefined = currentNode.nextStates.pop();
         if (typeof nextState === "undefined"){
-            throw new Error("Non-terminal state has no next state");
+            throw new Error("State somehow passed empty state check");
         }
         pathQueue.push(currentNode);
         if (nextState === end){
